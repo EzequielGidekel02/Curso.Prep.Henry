@@ -42,8 +42,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  
-  return y - x;
+  return x - y;
 }
 
 function multiplica(x, y) {
@@ -86,11 +85,11 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num < 90){
+ if(num < 90) {
     return true;
   }
-  else{
-    false;
+ else {
+    return false;
   }
 }
 
@@ -116,7 +115,7 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num %2 == 0){
+  if(num %2 === 0){
     true
   }
   else{
@@ -128,7 +127,7 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(num % 2 != 0){
+  if(num % 2 === 1){
     return true;
   }
   else{
@@ -178,13 +177,18 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if(num>0){
+  if(num === 0){
+    return false;
+  }
+  else if (num >0 ){
     return "Es positivo";
   }
+    
   else{
     return "Es negativo";
   }
 }
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -218,14 +222,14 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-   lado*4;
+   return lado * 4;
 }
 
 
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-   (base*altura)/2;
+   return (base*altura)/2;
 
 }
 
@@ -234,7 +238,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  cambioDolar = (euro * 1.2);
+  return euro * 1.2;
 }
 
 
@@ -246,15 +250,13 @@ function esVocal(letra){
 
     const vocales = ["a", "e", "i", "o", "u"];
 
-    if(letra != vocales){
-      return "No es vocal"
-    }
-    else if(letra.length > 1 || letra.length< 1){
-      return "Dato incorrecto"
-    }
-    else{
-      return "Es vocal"
-    }
+   if (letra.length > 1){
+     return "Datos incorrectos"
+   }
+
+   if (letra === "a" ||letra === "e" ||letra === "i" ||letra === "o" ||letra === "u"){
+     return "Es vocal"
+   }
 }
 
 
