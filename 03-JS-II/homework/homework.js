@@ -131,15 +131,15 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 3 ===0){
+  if(numero % 15 ===0){
+    return "fizzbuzz";
+  }
+  else if(numero % 3 ===0){
     return "fizz";
   }
   else if(numero % 5 === 0){
     return "buzz";
-  }
-  else if(numero % 3===0 && numero % 5 === 0){
-    return "fizzbuzz";
-  }
+  }  
   else{
     return numero;
   }
@@ -182,8 +182,10 @@ function esPrimo(numero) {
     if(numero % i === 0) {
       return false;
     }
+    else{
+      return true;
+    }
   }
-  return true;
 }
 
 function esVerdadero(valor){
@@ -204,7 +206,7 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí  
   let arrayTablaDel6 = []
-  for (let i = 6; i < 61; i++) {
+  for (let i = 6; i < 11; i++) {
         arrayTablaDel6.push(6 * i)
   }
   return arrayTablaDel6
