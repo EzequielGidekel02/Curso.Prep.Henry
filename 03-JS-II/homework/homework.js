@@ -137,7 +137,7 @@ function fizzBuzz(numero) {
   else if(numero % 5 === 0){
     return "buzz";
   }
-  else if(numero % 15===0){
+  else if(numero % 3===0 && numero % 5 === 0){
     return "fizzbuzz";
   }
   else{
@@ -152,19 +152,19 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
-  if (num1> 0 && num1 > num2 && num1 > num3){
-      return "Número 1 es mayor y positivo";
-  } 
-  else if(num1 < 0 || num2 < 0 || num3 < 0){
+  if(num1 < 0 || num2 < 0 || num3 < 0){
     return "Hay negativos";
+  }
+  else if(num1 === 0 || num2 === 0 || num3 === 0){
+    return "Error";
+  }  
+  else if (num1> 0 && num1 > num2 && num1 > num3){
+    return "Número 1 es mayor y positivo";
   }
   else if(num3 > num1 && num3 > num2){
     num3++;
     return num3;
-  }
-  else if(num1 === 0 || num2 === 0 || num3 === 0){
-    return "Error";
-  }
+  }  
   else{
     return "False";
   }
@@ -207,7 +207,7 @@ function tablaDelSeis(){
   for (let i = 6; i < 61; i++) {
         arrayTablaDel6.push(6 * i)
   }
-  return arrayTablaDel6s
+  return arrayTablaDel6
   
 }
 
@@ -226,13 +226,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var a = numero;
   var i = 0;
   do {
-    numero + 5;
-    i++;
+    i = i + 1;
+    a = a + 5;
   }
-  while (i <8)
-  return numero;
+  while(i < 8);
+  return a;
 }
 
 
